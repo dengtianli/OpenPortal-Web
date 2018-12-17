@@ -1,0 +1,14 @@
+{
+  "head": {
+    "status": 200,
+    "token": "",
+    "total": 0
+  },
+  "body": [{
+    "isLogin": true,
+    "rs": {
+      "orgName": "市公安局",
+      "userName": "超级管理员"
+    }
+  }]
+}

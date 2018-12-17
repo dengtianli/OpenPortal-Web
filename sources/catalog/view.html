@@ -1,0 +1,44 @@
+<main id="catalog-menu">
+  <div class="global-search"  v-if="showSearchDiv">
+    <div class="header-row2-text">
+      <img src="../assets/header/open-data-num.png" alt="open-data-num">
+      <span>已开放</span>
+      <!-- <span>{{ departmentCount }}</span>个部门、 -->
+      <span>{{ directoryCount }}</span>个数据集
+      <!-- <span>188</span>个应用</span> -->
+    </div>
+    <div class="input-patch">
+      <!-- <input type="text" v-model="keywords" class="form-control" placeholder="主题/机构/数据资源/应用名称"> -->
+      <input type="text" v-model="keywords" class="form-control" placeholder="数据资源">
+      <button class="btn btn-default" type="button" @click="searchRoute()">搜索</button>
+      <img class="search-icon" src="../assets/header/search.png" />
+    </div>
+  </div>
+  <div class="body">
+    <!-- <global-search v-on:clicknode="clickNode"></global-search> -->
+
+    <aside class="menu-list">
+      <el-tabs type="border-card" v-model="activeName2" @tab-click="getList(true)">
+        <el-tab-pane name="first">
+          <span slot="label">基础</span>
+          <el-tree :data="baseData" :props="defaultProps" node-key="id" default-expand-all :expand-on-click-node="false" @node-click="handleClick"
+            :highlight-current="true">
+          </el-tree>
+        </el-tab-pane>
+        <el-tab-pane name="second">
+          <span slot="label">主题</span>
+          <el-tree :data="topicData" :props="defaultProps" node-key="id" default-expand-all :expand-on-click-node="false" @node-click="handleClick"
+            :highlight-current="true">
+          </el-tree>
+        </el-tab-pane>
+         <el-tab-pane name="three">
+          <span slot="label">部门</span>
+          <el-tree :data="depData" :props="defaultProps" node-key="id" default-expand-all :expand-on-click-node="false" @node-click="handleClick"
+            :highlight-current="true">
+          </el-tree>
+        </el-tab-pane>
+      </el-tabs>
+    </aside>
+    <router-view class="router-catalog" :key="key" @clicknode="showDiv"></router-view>
+  </div>
+</main>

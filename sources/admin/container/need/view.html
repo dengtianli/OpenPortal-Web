@@ -1,0 +1,45 @@
+<main id="admin-need">
+  <div class="hd">
+    <p class="hd-title">我的需求</p>
+    <div class="hd-total">
+      <em>已<span id="totalR">需求</span> {{objCount.totalR}}条</em>
+    </div>
+  </div>
+  <div class="filter">
+    <div class="search">
+      <el-input placeholder="请输入" icon="search" v-model="search_inp" :on-icon-click="searchClick">
+      </el-input>
+    </div>
+  </div>
+  <div class="list_data">
+    <template>
+      <el-table :data="tableData" border style="width: 100%" v-loading="loading" element-loading-text="数据加载中" slot="empty">
+        <el-table-column label="需求名称">
+          <template scope="scope">
+            <div class="over_space">
+              <span v-bind:title="scope.row.require_name">{{scope.row.require_name}}</span>
+            </div>
+          </template>
+        </el-table-column>
+        <el-table-column label="内容" width="180">
+          <template scope="scope">
+            <div class="over_space">
+              <span v-bind:title="scope.row.requirement_desc">{{scope.row.requirement_desc}}</span>
+            </div>
+          </template>
+        </el-table-column>
+        <el-table-column label="时间" width="180">
+          <template scope="scope">
+            <div class="over_space">
+              <span v-bind:title="scope.row.create_time">{{scope.row.create_time}}</span>
+            </div>
+          </template>
+        </el-table-column>
+      </el-table>
+    </template>
+  </div>
+  <div class="block page">
+    <el-pagination @current-change="handleCurrentChange" layout="total, prev, pager, next, jumper" :total=objCount.totalR>
+    </el-pagination>
+  </div>
+</main>

@@ -1,0 +1,74 @@
+<main id="service-list">
+  <div class="header-row2">
+    <div class="header-row2-text">
+      <img src="../../assets/header/open-data-num.png" alt="open-data-num">
+      <span>已开放</span>
+        <span>{{ departmentCount }}</span>个部门、
+        <span>{{ directoryCount }}</span>个数据库
+        <!-- <span>188</span>个应用 -->
+    </div>
+    <div class="input-patch">
+      <input type="text" class="form-control" placeholder="主题/机构/数据资源/应用名称">
+      <button class="btn btn-default" type="button">搜索</button>
+      <img class="search-icon" src="../../assets/header/search.png" />
+    </div>
+  </div>
+  <div class="section-content">
+    <aside class="menu-list">
+      <left-menu></left-menu>
+    </aside>
+    <div class="catalog-content">
+      <div class="row-header">
+        <span class="header-span pull-right">共有
+          <span class="header-span-num">167</span>个应用</span>
+        <span class="header-span left-text">更新时间
+          <img class="img " src="../../assets/catalog/order-desc.png">
+        </span>
+        <span class="header-span left-text">访问量
+          <img class="img " src="../../assets/catalog/order.png"> </span>
+        <span class="header-span left-text">下载量
+          <img class="img " src="../../assets/catalog/order.png">
+        </span>
+      </div>
+      <div class="row-list" v-for="o in 4">
+        <div class="row1-title">
+            <router-link :to="{ path: '/layout/service/serviceList/detail', query: {name:'网络理政平台'}}">
+              <div class="row1-title-text pull-left"> 网络理政平台</div>
+            </router-link>
+          <div class="right-info pull-right">
+            <button type="button" class="btn btn-tool">下载</button>
+          </div>
+        </div>
+        <div  class="row2">
+          <div class="left">
+            <img class="img " src="../../assets/service/12345.png">
+          </div>
+          <div class="right">
+            <ul>
+              <li class="row2-des">
+                <i class="fa fa-circle"></i>
+                <span>应用简介：整合政府信息公开体系、市长信箱、12345市长热线等沟通渠道，集市民诉求表达、公民信息整合服务、政府信息</span>
+              </li>
+              <li class="row3-info">
+                <i class="fa fa-circle"></i>
+                <span>所属分类：民生服务</span>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="row3">
+          <span>更新时间：2017-7-28</span>
+          <div class="pull-right">
+            <span class="">382次浏览</span>
+            <span class="row4-right">36次下载</span>
+          </div>
+        </div>
+
+      </div>
+      <el-pagination @current-change="handlePageChange" :current-page="currentPage" layout="total, prev, pager, next, jumper" :total="total">
+      </el-pagination>
+    </div>
+  </div>
+
+</main>

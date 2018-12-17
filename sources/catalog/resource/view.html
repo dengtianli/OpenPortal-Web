@@ -1,0 +1,76 @@
+<main id="resource">
+    <div class="catalog-content">
+      <div class="row-header">
+        <span class="header-span pull-right">共有
+          <span class="header-span-num">{{ totalR }}</span>个资源</span>
+      </div>
+      <!-- <div class="tips" v-if="catalogData.length == 0 && loading == false">暂无数据</div>
+      <div class="row-list" v-for="item in catalogData">
+        <div class="row1-title">
+          <router-link :to="{ path: '/layout/catalog/details', query: {name:item.dataset_name,pid:item.resource_map_id,setId:item.dataset_id}}">
+            <div class="row1-title-text pull-left">{{ item.dataset_name }}</div>
+          </router-link>
+          <div class="right-info pull-right">
+          </div>
+        </div>
+        <ul>
+          <li class="row2-des">
+            <i class="fa fa-circle"></i>
+            <span class="" title="item.dataset_desc">数据详情：{{ item.dataset_desc }}</span>
+          </li>
+          <li class="row3-info">
+            <i class="fa fa-circle"></i>
+            <span>开放条件：<span>{{ item.share_dict_name }}</span></span>
+            <span>来源部门：<span>{{ item.dept_name }}</span></span>
+            <span>所属主题：<span>{{ item.classify_name }}</span></span>
+          </li>
+        </ul>
+        <div class="row4-info">
+          <span>更新时间：2017-7-28</span>
+          <div class="pull-right">
+            <span class="">382次浏览</span>
+            <span class="row4-right">36次下载</span>
+          </div>
+        </div>
+      </div> -->
+       <el-table :data="catalogData" border style="width: 100%" v-loading="loading" element-loading-text="数据加载中" slot="empty" highlight-current-row>
+        <el-table-column label="信息资源名称">
+          <template scope="scope">
+            <div class="over_space">
+              <span v-bind:title="scope.row.dataset_name">{{scope.row.dataset_name}}</span>
+            </div>
+          </template>
+        </el-table-column>
+         <el-table-column label="共享类型" >
+          <template scope="scope">
+            <div class="over_space">
+              <span v-bind:title="scope.row.share_type">{{scope.row.share_type}}</span>
+            </div>
+          </template>
+        </el-table-column>
+        <el-table-column label="开放类型" >
+          <template scope="scope">
+            <div class="over_space">
+              <span v-bind:title="scope.row.is_open">{{scope.row.is_open}}</span>
+            </div>
+          </template>
+        </el-table-column>
+        <el-table-column label="更新时间"  width="120">
+          <template scope="scope">
+            <div class="over_space">
+              <span v-bind:title="scope.row.update_time">{{scope.row.update_time | formatDate}}</span>
+            </div>
+          </template>
+        </el-table-column>
+        <el-table-column label="详情" width="120">
+          <template slot-scope="scope">
+            <el-button @click="handleCurrentChange(scope.row)" type="text" size="small">查看</el-button>
+          </template>
+        </el-table-column>
+      </el-table>
+      <el-pagination @current-change="handlePageChange" :current-page="currentPage" layout="total, prev, pager, next, jumper" :total="totalR"
+        :page-size="20">
+      </el-pagination>
+    </div>
+
+</main>

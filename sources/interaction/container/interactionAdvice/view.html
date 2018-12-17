@@ -1,0 +1,72 @@
+<main id="interaction-advice">
+
+  <el-form :model="ruleForm" :rules="rules2" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+    <el-row>
+        <p class="tips">欢迎您指出我们工作中存在的不足，提出建议和意见，帮助改善我们的服务水平。</p>
+      </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item label="标 题" :rules="[{ required: true, message: '标题不能为空', trigger: 'blur' }]" prop="title" label-suffix="sfdfsd">
+          <el-input v-model="ruleForm.title"></el-input>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item label="问题描述" :rules="[{ required: true, message: '问题详细不能为空', trigger: 'blur' }]" prop="content">
+          <el-input type="textarea" v-model="ruleForm.content"></el-input>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item label="电子邮件" :rules="[
+      { required: true, message: '邮箱不能为空', trigger: 'blur' },
+      { type: 'email', message: '请输入正确的邮件地址如：123@qq.com', trigger: 'blur,change' }
+    ]" prop="email">
+          <el-input v-model="ruleForm.email"></el-input>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item label="联系电话" :rules="[{
+          required: true,
+          message: '手机号码不能为空',
+          trigger: 'blur'
+        }, {
+          message: '请输入正确的手机号码',
+          pattern: /^(\d{3,4}-)?\d{7,8}$|(^1[3|4|5|7|8]\d{9}$)/,
+          trigger: 'blur,change'
+        }]" prop="contactPhone">
+          <el-input v-model="ruleForm.contactPhone"></el-input>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item label="验证码"  prop="inputCode">
+          <form id="form1" runat="server">
+            <div class="verification">
+              <el-input v-model="ruleForm.inputCode"></el-input>
+              <table border="0" cellspacing="5" cellpadding="5" >
+                  <tr>
+                      <td></td><td> <div class="code" id="checkCode" @click="createCode()" ></div></td>
+                  </tr>
+              </table>
+            </div>
+          </form>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item>
+          <el-button type="primary" :disabled="disable" @click="submitForm('ruleForm')">提交</el-button>
+        </el-form-item>
+      </el-col>
+    </el-row>
+
+  </el-form>
+
+</main>

@@ -1,0 +1,14 @@
+<main id="catalog-menu">
+  <el-tabs type="border-card" v-model="activeName2" @tab-click="getList(activeName2)" >
+    <el-tab-pane name="first">
+      <span slot="label">主题</span>
+      <el-tree :data="data2" :props="defaultProps" node-key="id" default-expand-all :expand-on-click-node="false" @node-click="handleClick" :highlight-current="true"> 
+      </el-tree>
+    </el-tab-pane>
+    <el-tab-pane name="second">
+      <span slot="label">部门</span>
+      <el-tree :data="data1" :props="defaultProps" node-key="id" default-expand-all :expand-on-click-node="false" @node-click="handleClick" :highlight-current="true">
+      </el-tree>
+    </el-tab-pane>
+  </el-tabs>
+</main>

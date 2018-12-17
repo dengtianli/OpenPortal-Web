@@ -1,0 +1,56 @@
+@import "../../../common/styles/base.scss";
+#interaction-advice {
+  .tips {
+    color: #9DA1AA;
+    margin-bottom: 4%;
+    margin-left: 13px;
+  }
+  .help-block {
+    color: #737373;
+  }
+  .el-button--primary {
+    background-color: #4197F4;
+    color: #fff;
+    width: 120px;
+    height: 32px;
+  }
+  // 验证码
+  #form1 {
+    .code{
+     // background:url(code_bg.jpg);
+     font-family:Arial;
+     font-style:italic;
+     color:blue;
+     font-size:24px;
+     border:0;
+     padding:2px 3px;
+     letter-spacing:3px;
+     font-weight:bolder;
+     float:left;
+     cursor:pointer;
+     width:150px;
+     height:60px;
+     line-height:60px;
+     text-align:center;
+     vertical-align:middle;
+    }
+    a{
+      text-decoration:none;
+      font-size:12px;
+      color:#288bc4;
+    }
+    a:hover{
+      text-decoration:underline;
+    }
+  }
+  .verification {
+    display: flex;
+    justify-content:space-between;
+    input {
+      height: 36px;
+      border-radius: 4px;
+      border: 1px solid #bfcbd9;
+    }
+
+  }
+}

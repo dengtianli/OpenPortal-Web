@@ -1,0 +1,23 @@
+@import "../common/styles/base.scss";
+#register {
+  background: $white;
+  .body {
+    @include container;
+    .title {
+      border-bottom: 1px solid #ddd;
+      padding: 60px 0 20px 0;
+    }
+    .form {
+      margin: 60px auto;
+      .help-block {
+        color: #737373;
+      }
+      .el-button--primary {
+        background-color: #4197F4;
+        color: #fff;
+        width: 120px;
+        height: 32px;
+      }
+    }
+  }
+}

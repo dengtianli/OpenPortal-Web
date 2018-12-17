@@ -1,0 +1,433 @@
+[{
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-Z-001",
+  "name": "市自来水公司",
+  "id": "0R-7MWE4EeeOgbHGC0iMEw"
+}, {
+  "has_leaf": 0,
+  "level": 1,
+  "orgCode": "510100-C-018",
+  "name": "市城管委",
+  "id": "2iNYwWE1EeeCBJyU7F4I7Q"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-Z-002",
+  "name": "市供电公司",
+  "id": "2YZOEWE4EeeOIrfZKQVjmA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-017",
+  "name": "市房管局",
+  "id": "8gLMAWE1EeeXaO7AA5-TWg"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-Z-003",
+  "name": "市燃气公司",
+  "id": "9jWY4WE4EeeoDdUjWdya1w"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-B-001",
+  "name": "你好",
+  "id": "a334bcab5d5444248ebddec15f3dedcb"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-Z-006",
+  "name": "中国联通成都分公司",
+  "id": "AcvA0WE5Eee7q7aUm8m-ng"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-J-014",
+  "name": "成都公积金中心",
+  "id": "aJ4w8WE4EeekGspN7OFrfA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-039",
+  "name": "市金融办",
+  "id": "ayx88WE4Eeewct6VRld9rw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-001-022",
+  "name": "是滴是滴",
+  "id": "BD-ccWE4Eee_CbtX-XgMXQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-008",
+  "name": "市监察局",
+  "id": "bf-aIWE4EeetZoQ1757d5Q"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-Z-007",
+  "name": "市轨道交通公司",
+  "id": "BJR9wWE5EeevE_4mfsyYWg"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-Z-008",
+  "name": "市公交公司",
+  "id": "BuMosWE5EeeW5YVMFdSHjw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-038",
+  "name": "市法制办",
+  "id": "c15rQWE4Eee7mNVhsCqaxg"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-Z-009",
+  "name": "市天府通公司",
+  "id": "CaKW0WE5EeeC9_toojW0_Q"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-028",
+  "name": "市审计局",
+  "id": "cIdWcWE4EeeqD7pgwUFHzg"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-006",
+  "name": "市民宗局",
+  "id": "d1FQUWE4Eee1ophhRVULMw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-009",
+  "name": "市民政局",
+  "id": "etxEgWB3EeeJffK72LpRDw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-022",
+  "name": "市农委",
+  "id": "f9dSEWE4EeeWp6eeyMWx5A"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-010",
+  "name": "市司法局",
+  "id": "f9HMgWB3Eeej3o9rntVaEg"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-I-007",
+  "name": "市残联",
+  "id": "FPAScWE4Eeeu1cO_lpRbOg"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-034",
+  "name": "市体育局",
+  "id": "g3EaoWE4EeewIfWW9xjUIw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-016",
+  "name": "市规划局",
+  "id": "gUNd4WB3Eeep7rXfne5KxA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-030",
+  "name": "市国资委",
+  "id": "HSopAWE2Eee686EaYo4qZQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-040",
+  "name": "市机关事务管理局",
+  "id": "hTpo8GE4Eee5c8jarXTb3A"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-J-006",
+  "name": "市防震减灾局",
+  "id": "Hzj54WE4EeeVqsglfKXgwA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-019",
+  "name": "市交委",
+  "id": "iBJg0WB3Eee9rNDYTU5vSQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-029",
+  "name": "市外侨办",
+  "id": "kB5-8WE4Eeea37ZhYMeGVQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-023",
+  "name": "市林业园林局",
+  "id": "kgi7cWB3EeeyM9k5IiUfMQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-041",
+  "name": "市人防办",
+  "id": "lawoQWE4EeeSUK4HWCO_kw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-I-012",
+  "name": "市博览局",
+  "id": "m9hbgWE4Eee3o9piEyKbjw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-004",
+  "name": "市教育局",
+  "id": "MbnDEWE4EeeB6cbqj67bXw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-031",
+  "name": "市工商局",
+  "id": "mOCYAWB3Eee_qdPB29ZTEQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-025",
+  "name": "市投促委",
+  "id": "mRD-IWE4EeeImJzLxMRZbg"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-005",
+  "name": "市科技局",
+  "id": "NW8C4WE4Eeeuvckp8Ch7wQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-032",
+  "name": "市质监局",
+  "id": "oDPmIWB3Eee85efG844CHA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-011",
+  "name": "市财政局",
+  "id": "OUgeYWE4Eeeaca8UnmfB7g"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-037",
+  "name": "市旅游局",
+  "id": "paVU4WB3EeeGzYXnXo01Ow"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-J-013",
+  "name": "市档案局",
+  "id": "puDpcWE4EeeYjvq6vocp6A"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-013",
+  "name": "市国土局",
+  "id": "PX0VgWE4EeeRTvLasocMog"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-012",
+  "name": "市人社局",
+  "id": "QbgAEGE4EeeFD_GHreZ8qw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-015",
+  "name": "市建委",
+  "id": "Qx4fwWE4EeeviatwtPPjAQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-J-012",
+  "name": "市地志办",
+  "id": "qZsncWE4EeebXYjtf6L_lQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-J-002",
+  "name": "市气象局",
+  "id": "rEt6YWE4EeeJJP4mMey5KQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-021",
+  "name": "市水务局",
+  "id": "RmhBsWE4EeesV5q5NCG0kg"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-J-001",
+  "name": "市公共资源交易中心",
+  "id": "rvsKAWE4Eeedp68wdhoRgw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-G-001",
+  "name": "市法院",
+  "id": "s95CgWE4EeecXqQwa7BOXA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-007",
+  "name": "市公安局",
+  "id": "S96yMWB3Eeefr6tquJMX6w"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-024",
+  "name": "市商务委",
+  "id": "STMhgWE4EeeQ-beUCC2FSA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-020",
+  "name": "市物流办",
+  "id": "sV2yIWE4Eee59K3H8rpR4w"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-027",
+  "name": "市卫计委",
+  "id": "T6J4QWE4Eeeh8a2TIuTVDw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-F-001",
+  "name": "市检察院",
+  "id": "tjr3MWE4EeefJ8QtoQBaCw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-026",
+  "name": "市文广新局",
+  "id": "TKsKMGE4EeeJx4C88s_2hA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-014",
+  "name": "市环保局",
+  "id": "UoZeUWE4Eee62JvpUZfL_w"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-J-004",
+  "name": "市委党校",
+  "id": "uZ3RQWE4EeeV7sG1rLYuGQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-I-006",
+  "name": "市总工会",
+  "id": "vEwoYWE4EeeiPo8Fokfhfw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-043",
+  "name": "市政府政务中心",
+  "id": "vlz8cWE3Eee5gqWuUrLjew"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-I-005",
+  "name": "团市委",
+  "id": "vpiwcWE4EeehyJodrn2uXw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-036",
+  "name": "市统计局",
+  "id": "VYjv8WE4EeeeXdWbnoRTOw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-I-011",
+  "name": "市文联",
+  "id": "w8_8YWE4EeeNbKRmOUYeqQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-033",
+  "name": "市食药监局",
+  "id": "WF6lMWE4Eee4Tf8LRguxaA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-I-004",
+  "name": "市妇联",
+  "id": "wTpdYWE4Eeeu9OshKI36Tw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-D-001",
+  "name": "市国税局",
+  "id": "Wu6e4WE4EeeBbv1cK5rXhQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-D-002",
+  "name": "市地税局",
+  "id": "XbG2gWE4Eeei_9R7HK6MnA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-H-008",
+  "name": "市工商联",
+  "id": "xhSVMWE4EeeiJJGjxmadyg"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-002",
+  "name": "市发改委",
+  "id": "XVFicV-VEeeHXP9idg4wQQ"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-J-018",
+  "name": "市邮政管理局",
+  "id": "y4IMUWE4EeeRcoGmSiJL4A"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-J-015",
+  "name": "市老龄办",
+  "id": "yI_OYWE4EeeNisrHNENMFw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-003",
+  "name": "市经信委",
+  "id": "yk8mAV-VEeeyLJLOpCkbrw"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-C-035",
+  "name": "市安监局",
+  "id": "YQto0WE4EeeKsoZnMB0apA"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-Z-005",
+  "name": "中国移动成都分公司",
+  "id": "_1yVkWE4Eee9Lr9oAAPAog"
+}, {
+  "has_leaf": 1,
+  "level": 1,
+  "orgCode": "510100-Z-004",
+  "name": "中国电信成都分公司",
+  "id": "_MdrwWE4EeeeXpgpZdk3rw"
+}]

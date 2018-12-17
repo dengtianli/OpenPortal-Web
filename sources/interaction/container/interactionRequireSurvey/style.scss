@@ -1,0 +1,70 @@
+@import "../../../common/styles/base.scss";
+
+#require-survey {
+  // margin-left: 15px;
+  .tips {
+    color: #9DA1AA;
+    margin-bottom: 4%;
+    margin-left: 13px;
+  }
+  .el-form-item .el-form-item {
+    margin-bottom: 22px!important;
+  }
+  .el-button--primary {
+    background-color: #4197F4;
+    color: #fff;
+    // width: 120px;
+    // height: 32px;
+  }
+  .el-select{
+    width: 100%;
+  }
+  .depBtn .el-button{
+    float: right !important;
+    margin: 15px;
+  }
+  .read>input {
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1;
+  }
+  // 验证码
+  #form1 {
+    .code{
+     // background:url(code_bg.jpg);
+     font-family:Arial;
+     font-style:italic;
+     color:blue;
+     font-size:30px;
+     border:0;
+     padding:2px 3px;
+     letter-spacing:3px;
+     font-weight:bolder;
+     float:left;
+     cursor:pointer;
+     width:150px;
+     height:60px;
+     line-height:60px;
+     text-align:center;
+     vertical-align:middle;
+    }
+    a{
+      text-decoration:none;
+      font-size:12px;
+      color:#288bc4;
+    }
+    a:hover{
+      text-decoration:underline;
+    }
+  }
+  .verification {
+    display: flex;
+    justify-content:space-between;
+    input {
+      height: 36px;
+      border-radius: 4px;
+      border: 1px solid #bfcbd9;
+    }
+
+  }
+}

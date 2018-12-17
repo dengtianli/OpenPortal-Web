@@ -1,0 +1,39 @@
+@import "../../common/styles/base.scss";
+#interaction-sidebar {
+  .interaction-menuList {
+    border: 1px solid #DFDFDF;
+    height: 400px;
+    li {
+      height: 46px;
+      line-height: 46px; // padding-left: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border-bottom: 1px solid #DFDFDF;
+      &:hover {
+        background: #4197F4;
+        a {
+          color: $white;
+        }
+      }
+      .fa {
+        margin-right: 15px;
+        vertical-align: middle;
+      }
+      >a {
+        padding-left: 20px;
+        width: 100%;
+        @include main-color;
+        text-decoration: none;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+    }
+    .router-link-active {
+      background: #4197F4;
+      color: $white;
+    }
+    .level-2 {
+      padding-left: 120px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+    @import "../styles/base.scss";
+    #login-dialog{
+      #dialog-modal{
+        .inputdiv{
+            margin: 30px auto;
+            text-align: center;
+            display: center;
+            justify-content: center;
+            .spanuser{
+              display: inline-block;
+              background: #4197F4;
+              vertical-align: middle;
+              img{
+                padding: 8px 13px;
+              }
+            }
+            input{
+              height: 38px;
+              width: 80%;
+              //width: 365px;
+              outline: none;
+              text-indent: 10px;
+              border: none;
+              border: 1px solid #dfdfdf;
+            }
+        }
+      }
+    }

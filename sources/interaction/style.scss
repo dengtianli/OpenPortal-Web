@@ -1,0 +1,33 @@
+@import "../common/styles/base.scss";
+.interaction-warp {
+  width: 100%;
+}
+#interaction {
+  // @include container;
+  width: 77.9%;
+  margin: 15px auto 0;
+  .route-guid {
+    // margin: 20px 0;
+    width: 100%;
+    background:#F9F9F9;
+    height: 3rem;
+    padding-left: 0px;
+    p {
+      padding-left: 15px;
+      font-size: 14px;
+      color: #636C82;
+      line-height: 3rem;
+    }
+  }
+  .left {
+    margin-right: 15px;
+    background: $white;
+  }
+  .right{
+    background: $white;
+    // border: 
+  }
+  p{
+        margin: 0 0 10px;
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "applyList": {
+    "pages": 12,
+    "total": 16,
+    "size": 20,
+    "recordsTotal": 20,
+    "body": [{
+      "dirStructure": "政务基础信息资源目录->社会信用->企业信用->企业提警示信息->行政执法信息",
+      "setCode": "cW6MwWB1EeerOZewpXkarA421",
+      "auditStatus": "PENDING",
+      "description": "申请数据项_告知内容",
+      "applyDatetime": "2017-08-31 17:54:40"
+    }, {
+      "dirStructure": null,
+      "setCode": "w5op8WB1Eeegh7JJ6hMF2A1549",
+      "auditStatus": "PENDING",
+      "description": " vbc",
+      "applyDatetime": "2017-08-22 19:17:46"
+    }, {
+      "dirStructure": "政务主题信息资源目录->社区管理->社区组织队伍->社区工作者队伍",
+      "setCode": "UaLmwWB1EeeGP8z9ublHbw819",
+      "auditStatus": "PENDING",
+      "description": "出生年月的申请理由,证书登记的申请理由",
+      "applyDatetime": "2017-08-21 14:46:52"
+    }, {
+      "dirStructure": "政务基础信息资源目录->社会信用->企业信用->企业提警示信息->行政执法信息",
+      "setCode": "cW6MwWB1EeerOZewpXkarA421",
+      "auditStatus": "PENDING",
+      "description": "申请数据项_告知内容",
+      "applyDatetime": "2017-08-31 17:54:40"
+    }, {
+      "dirStructure": null,
+      "setCode": "w5op8WB1Eeegh7JJ6hMF2A1549",
+      "auditStatus": "PENDING",
+      "description": " vbc",
+      "applyDatetime": "2017-08-22 19:17:46"
+    }, {
+      "dirStructure": "政务主题信息资源目录->社区管理->社区组织队伍->社区工作者队伍",
+      "setCode": "UaLmwWB1EeeGP8z9ublHbw819",
+      "auditStatus": "PENDING",
+      "description": "出生年月的申请理由,证书登记的申请理由",
+      "applyDatetime": "2017-08-21 14:46:52"
+    }, {
+      "dirStructure": "政务基础信息资源目录->社会信用->企业信用->企业提警示信息->行政执法信息",
+      "setCode": "cW6MwWB1EeerOZewpXkarA421",
+      "auditStatus": "PENDING",
+      "description": "申请数据项_告知内容",
+      "applyDatetime": "2017-08-31 17:54:40"
+    }]
+  },
+  "count": {
+    "recordsFiltered": 3,
+    "pendingNum": 1,
+    "reviewedNum": 2
+  }
+}

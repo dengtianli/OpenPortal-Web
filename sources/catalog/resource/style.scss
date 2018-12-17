@@ -1,0 +1,115 @@
+@import "../../common/styles/base.scss";
+#resource {
+  .tips {
+    margin: 20px auto;
+    text-align: center;
+    color: $color-tea-dark;
+  }
+  .row-header {
+    height: 43px;
+    padding: 10px;
+    span {
+      margin-right: 1.06rem;
+    }
+    .left-text {
+      cursor: pointer;
+    }
+    .header-span {
+      font-size: 14px;
+      color: $color-tea-dark;
+      .header-span-num {
+        margin-right: 0;
+      }
+    }
+  }
+  .row-list {
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.10);
+    border-top: 2px solid $color-blue;
+    .row1-title {
+      display: block;
+      width: 100%;
+      height: 3rem;
+      a {
+        text-decoration: none;
+      }
+      .row1-title-text {
+        cursor: pointer;
+        min-width: 21rem;
+        height: 3rem;
+        font-size: $size-title-small;
+        color: $white;
+        padding: 10px 15px;
+        line-height: $line-height-larger0;
+        background-image: linear-gradient(to right, #76C8FB 0%,$main-blue 100%);
+        border-radius: 0 0 100px 0;
+      }
+      .right-info {
+        margin-top: 1rem;
+        button {
+          outline: none;
+        }
+      }
+      .btn-tool {
+        cursor: pointer;
+        border-radius: 5px;
+        background: $white;
+        border: 1px solid $color-blue-text;
+        border-radius: 4px;
+        font-size: 14px;
+        color: $color-blue-text;
+        width: 4.5rem;
+        height: 1.5rem;
+        margin-right: 1.06rem;
+      }
+    }
+    ul {
+      padding-left: 1rem;
+      i {
+        color: $color-orange-light;
+        font-size: 0.1rem;
+        margin-right: 0.5rem;
+      }
+      .row2-des {
+        padding-top: 1rem;
+        font-size: $size-text-large;
+        color: $light-black;
+        line-height: 21px;
+        display: flex;
+        span {
+          max-width: 70%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-wrap: nowrap;
+          display: inline-block;
+          white-space: nowrap;
+        }
+        i {
+          margin-top: 0.3rem;
+        }
+      }
+      .row3-info {
+        padding-top: 0.5rem;
+        font-size: $size-text-large;
+        color: $light-black;
+        line-height: 21px;
+        span {
+          margin-right: 30px;
+        }
+      }
+    }
+    .row4-info {
+      padding: 2rem 0 1rem 1rem;
+      font-size: $size-text-large;
+      color: $color-silver-light;
+      line-height: 21px;
+      span {
+        margin-right: 30px;
+      }
+      .row4-right {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

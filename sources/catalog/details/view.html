@@ -1,0 +1,116 @@
+<main id="details">
+  <div class="catalog-content">
+    <div class="location-desc">
+      <span class="position">当前位置：</span>
+      <el-breadcrumb separator=">" class="breadcrumb">
+        <el-breadcrumb-item to="/layout/catalog/infolist">数据目录</el-breadcrumb-item>
+        <el-breadcrumb-item>{{head_title}} - 详情</el-breadcrumb-item>
+      </el-breadcrumb>
+      <a href="javascript:;" class="back-link" @click='goback()'><i class="fa fa-angle-left font-bold"></i> 返回</a>
+    </div>
+    <div class="header-desc">
+      <div class="row1-title-text pull-left"> {{head_title}}-详情</div>
+      <div class="pull-right right-info">
+        <span v-show="collectionStatus"><img src="../../assets/catalog/star_active.png"  width="18" height="17" /></span>
+        <span v-show="!collectionStatus"><img src="../../assets/catalog/star.png" width="18" height="17" /></span>
+        <button type="button" class="btn btn-tool" @click="handleCollection()">收藏</button>
+        <button type="button" class="btn btn-tool" @click="getCorrection()">纠错</button>
+      </div>
+      <!-- <a href="javascript:;" class="back-link" @click='goback()'>
+          <i class="fa fa-angle-left font-bold"></i> 返回</a> -->
+    </div>
+    <ul class="detail">
+      <li class="item-info">
+        <i class="fa fa-circle"></i>
+        <span>数据详情：{{ detailData.dataset_desc }}</span>
+      </li>
+      <li class="item-info">
+        <i class="fa fa-circle"></i>
+        <span>来源部门：{{ detailData.dept_name }}</span>
+      </li>
+      <li class="item-info">
+        <i class="fa fa-circle"></i>
+        <span>所属主题：{{ detailData.classify_name }}</span>
+      </li>
+      <!--  <li class="item-info">
+              <i class="fa fa-circle"></i>
+              <span>提供方式：API接口服务</span>
+          </li> -->
+      <li class="item-info">
+        <i class="fa fa-circle"></i>
+        <span>数据格式：json</span>
+      </li>
+      <li class="item-info">
+        <i class="fa fa-circle"></i>
+        <span>发布时间：{{ detailData.create_time }}</span>
+      </li>
+      <li class="item-info">
+        <i class="fa fa-circle"></i>
+        <span>更新时间：{{ detailData.update_time }}</span>
+      </li>
+
+    </ul>
+    <div class="item-content">
+      <div class="item-header">
+        {{head_title}}
+      </div>
+      <el-tabs v-model="activeTab" @tab-click="handleClick">
+        <el-tab-pane label="数据项列表" name="itemlist">
+          <el-table :data="tableDataItem" border style="width: 98%">
+            <!-- <el-table-column align="center" type="index" label="序号" width="80">
+              </el-table-column>
+              <el-table-column align="center" label="英文名称" width="150" prop="enName"></el-table-column>
+              <el-table-column align="center" prop="cnName" label="中文名称">
+              </el-table-column>
+              <el-table-column align="center" prop="is_open" label="开放类型" width="150">
+              </el-table-column> -->
+            <el-table-column align="center" type="index" label="序号" width="80">
+            </el-table-column>
+            <el-table-column align="center" label="数据项名称" width="150" prop="item_name"></el-table-column>
+            <el-table-column align="center" prop="share_type" label="共享类型">
+            </el-table-column>
+            <el-table-column align="center" prop="is_open" label="是否可开放" width="150">
+            </el-table-column>
+            <el-table-column align="center" prop="share_method" label="共享方式" width="150">
+            </el-table-column>
+          </el-table>
+          <el-pagination @current-change="handlePageChangeData" :current-page="currentPage" layout="total, prev, pager, next, jumper" :total="totalR1"
+        :page-size="10">
+      </el-pagination>
+        </el-tab-pane>
+        <el-tab-pane label="文件下载" name="setFiles">
+          <el-table :data="dataSetFiles" border style="width: 98%">
+            <el-table-column align="center" type="index" label="序号" width="80">
+            </el-table-column>
+            <el-table-column align="center" label="文件名称">
+              <template slot-scope="scope">
+                <div class="over_space">
+                  <a v-bind:href="scope.row.dataset_file_path">{{scope.row.file_name}}</a>
+                </div>
+              </template>
+            </el-table-column>
+            <el-table-column align="center" prop="format" label="文件格式"  width="100">
+            </el-table-column>
+            <el-table-column align="center" prop="upload_time" label="上传时间" width="150">
+            </el-table-column>
+          </el-table>
+          <el-pagination @current-change="handlePageChange" :current-page="currentPage" layout="total, prev, pager, next, jumper" :total="totalR"
+        :page-size="10">
+      </el-pagination>
+        </el-tab-pane>
+      </el-tabs>
+    </div>
+  </div>
+  <!--纠错对话框-->
+  <el-dialog title="纠错说明" :visible.sync="dialogFormVisible" size="tiny">
+    <el-form :model="correctionForm" :rules="formRules" ref="correctionForm">
+      <el-form-item label="" prop="content" label-suffix="sfdfsd">
+        <el-input type="textarea"  :rows="10" :maxlength=500 placeholder="请详细描述纠错内容" v-model="correctionForm.content"></el-input>
+      </el-form-item>
+    </el-form>
+    <div slot="footer" class="dialog-footer">
+      <el-button @click="dialogFormVisible = false">取 消</el-button>
+      <el-button type="primary" @click="handleCorrection()">提 交</el-button>
+    </div>
+  </el-dialog>
+</main>

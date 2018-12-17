@@ -1,0 +1,77 @@
+// 主色
+$light-Blue:#58B7FF;
+$blue:#20A0FF;
+$dark-blue:#1879E3;
+$main-blue:#001e9d;
+$hd-blue:#3BAAF1;
+$hd-blue-light:#8ab1de;
+
+// 辅助色
+$tableHd-blue:#f9fbff;
+$tableTr-hover:#F2F8FD;
+// 中性色
+$black:#142444;
+$light-black:#475065;
+
+$extra-light-silver:#C0CCDA;
+$gray:#D3DCE6;
+$light-gray:#E5E9F2;
+$extra-light-gray:#EFF2F7;
+$dark-white:#f3f3f3;
+$white:#FFFFFF;
+
+//  项目颜色
+$color-tea-dark:#636C82;
+$color-white-light: #F9F9F9;
+$color-silver-light:#9DA1AA;
+$color-blue-text:#4EB0FF;
+$color-orange-light:#FAD04D;
+$color-blue: #76C8FB;
+
+ // Font 
+$size-title-large: 24px;
+// $size-titile-regular: 18px;
+$size-title-small: 16px;
+$size-text-large: 14px;
+// $size-text-regular: 13px;
+$size-text-small: 12px;
+
+// line-height
+$line-height-larger2:42px;
+$line-height-larger1:30px;
+$line-height-larger:24px;
+$line-height-larger0:21px;
+$line-height-large:16px;
+
+/** Helper */
+@mixin fill {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin clean {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+@mixin pull-left {
+  float: left;
+}
+
+@mixin pull-right {
+  float: right;
+}
+@mixin container{
+  width: 1260px;
+  margin: 0 auto;
+}
+@mixin main-color{
+color: #333;
+}
+.over_space{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }

@@ -1,0 +1,23 @@
+@import "../common/styles/base.scss";
+#admin {
+  @include container;
+  .route-guid {
+    margin: 20px 0;
+    padding-left: 0px;
+  }
+  .left {
+    margin-right: 15px;
+    background: $white;
+    // filter: progid: DXImageTransform.Microsoft.Shadow(color=#909090, direction=120, strength=4);
+    // -moz-box-shadow: 2px 2px 10px #909090;
+    // -webkit-box-shadow: 2px 2px 10px #909090;
+    box-shadow: 2px 2px 10px #909090;
+  }
+  .right{
+    background: $white;
+    //     filter: progid: DXImageTransform.Microsoft.Shadow(color=#909090, direction=120, strength=4);
+    // -moz-box-shadow: 2px 2px 10px #909090;
+    // -webkit-box-shadow: 2px 2px 10px #909090;
+    box-shadow: 2px 2px 10px #909090;
+  }
+}

@@ -1,0 +1,43 @@
+<main id="login" @keyup.enter="keydownLogin($event)">
+  <header>
+    <img class="logopng" src="../assets/login/logo.png">
+    <section class="top_conttitle"> 
+       <router-link to="/layout/dashboard">
+          <img class="title-image" src="../assets/login/title.png">
+       </router-link>
+      <div class="righttext">
+      </div>
+    </section>
+  </header>
+  <form class="form-horizontal">
+    <div class="inputdiv reg-box">
+      <span class="spanuser">
+        <img src="../assets/login/Username.png"/>
+      </span>
+      <input type="text" v-model="username" class="account" name="username" placeholder="用户名" />
+    </div>
+    <div class="inputdiv reg-box">
+      <span class="spanuser">
+        <img src="../assets/login/Password.png"/>
+      </span>
+      <input type="password" v-model="password" class="admin_pwd" name="password" placeholder="密码" />
+    </div>
+    <span v-show="errorShow" class="error">用户名或密码错误，请重新输入!</span>
+    <div class="inputdiv about-password">
+      <el-checkbox label="记住密码" name="type" v-model="ischecked"></el-checkbox>
+     <!--  <router-link to="/layout/dashboard">
+        <span class="forget">忘记密码</span>
+      </router-link> -->
+    </div>
+    <div class="inputdiv">
+      <button class="login_subtn"  type="button" @click="onSubmit()">登&emsp;录</button>
+    </div>
+    <div class="inputdiv">
+      <button class="registered_subtn"  type="button" >
+        <router-link to="/register">
+          <span class="register-text">注&emsp;册</span>
+        </router-link>
+      </button>
+    </div>
+  </form>
+</main>

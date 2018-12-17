@@ -1,0 +1,43 @@
+<main id="resource">
+    <div class="catalog-content" v-loading="loading" element-loading-text="加载中">
+      <div class="row-header">
+        <span class="header-span pull-right">共有
+          <span class="header-span-num">{{ totalR }}</span>个资源</span>
+      </div>
+      <div class="tips" v-if="catalogData.length == 0 && loading == false">暂无数据</div>
+      <div class="row-list" v-for="item in catalogData">
+        <div class="row1-title">
+          <router-link :to="{ path: '/layout/catalog/details', query: {name:item.dataset_name,pid:item.resource_map_id,setId:item.dataset_id}}">
+            <div class="row1-title-text pull-left">{{ item.dataset_name }}</div>
+          </router-link>
+          <div class="right-info pull-right">
+            <!-- <button type="button" class="btn btn-tool" v-bind:href="item.dataset_file_path">文件下载</button> -->
+            <!-- <button type="button" class="btn btn-tool">接口调用</button> -->
+          </div>
+        </div>
+        <ul>
+          <li class="row2-des">
+            <i class="fa fa-circle"></i>
+            <span class="" title="item.dataset_desc">数据详情：{{ item.dataset_desc }}</span>
+          </li>
+          <li class="row3-info">
+            <i class="fa fa-circle"></i>
+            <span>开放条件：<span>{{ item.share_dict_name }}</span></span>
+            <span>来源部门：<span>{{ item.dept_name }}</span></span>
+            <span>所属主题：<span>{{ item.classify_name }}</span></span>
+          </li>
+        </ul>
+        <div class="row4-info">
+          <span>更新时间：2017-7-28</span>
+          <div class="pull-right">
+            <span class="">382次浏览</span>
+            <span class="row4-right">36次下载</span>
+          </div>
+        </div>
+      </div>
+      <el-pagination @current-change="handlePageChange" :current-page="currentPage" layout="total, prev, pager, next, jumper" :total="totalR"
+        :page-size="10">
+      </el-pagination>
+    </div>
+
+</main>

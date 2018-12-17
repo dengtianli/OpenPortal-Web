@@ -1,0 +1,72 @@
+<main id="register">
+  <div class="body">
+    <div class="title">
+      <h3>注册申请</h3>
+    </div>
+    <div class="form">
+      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <el-row>
+          <el-col :span="16" :offset="6">
+            <el-row>
+              <el-col :span="14" :offset="1">
+                <el-form-item label="姓名" prop="realName" label-suffix="sfdfsd">
+                  <el-input v-model="ruleForm.realName"></el-input>
+                </el-form-item>
+              </el-col>
+              <el-col :span="6" :offset="1">
+                <label class=" help-block">填写您的真实姓名</label>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="14" :offset="1">
+                <el-form-item label="用户名" prop="loginName">
+                  <el-input type="text" v-model="ruleForm.loginName"></el-input>
+                </el-form-item>
+              </el-col>
+              <el-col :span="6" :offset="1">
+                <label class=" help-block">填写您的登录名称</label>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="14" :offset="1">
+                <el-form-item label="密码" prop="loginPassword">
+                  <el-input type="text" v-model="ruleForm.loginPassword"></el-input>
+                </el-form-item>
+              </el-col>
+              <el-col :span="6" :offset="1">
+                <label class=" help-block">请设置您的登录密码</label>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="14" :offset="1">
+                <el-form-item label="电子邮箱" prop="email">
+                  <el-input v-model="ruleForm.email"></el-input>
+                </el-form-item>
+              </el-col>
+              <el-col :span="6" :offset="1">
+                <label class=" help-block">填写您的电子邮箱地址</label>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="14" :offset="1">
+                <el-form-item label="联系电话" prop="phoneNumber">
+                  <el-input v-model="ruleForm.phoneNumber"></el-input>
+                </el-form-item>
+              </el-col>
+              <el-col :span="6" :offset="1">
+                <label class=" help-block">填写您的固定电话或手机号码，以便与您联系沟通</label>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="14" :offset="1">
+                <el-form-item>
+                  <el-button type="primary" :disabled="disable" @click="submitForm('ruleForm')">提交</el-button>
+                </el-form-item>
+              </el-col>
+            </el-row>
+          </el-col>
+        </el-row>
+      </el-form>
+    </div>
+  </div>
+</main>

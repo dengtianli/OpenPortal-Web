@@ -1,0 +1,18 @@
+<main id="service-menu">
+    <el-tabs type="border-card">
+        <el-tab-pane>
+          <span slot="label">应用分类</span>
+          <el-tree
+          :data="data2"
+          :props="defaultProps"
+          node-key="id"
+          default-expand-all
+          :expand-on-click-node="false"
+          :render-content="renderContent">
+        </el-tree>
+        
+        
+        </el-tab-pane>
+       
+      </el-tabs>
+</main>

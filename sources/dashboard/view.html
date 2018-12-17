@@ -1,0 +1,224 @@
+<main id="dashboard">
+  <!-- banner start -->
+  <header class="banner">
+    <div class="banner-row1">
+      <div class="logo-text">
+        <div class="banner-row1-text">
+          <img src="../assets/dashboard/logo.png" alt="logo">
+          <span>成都市政务信息资源开放目录</span>
+        </div>
+      </div>
+      <div class="head-nav" id="navbar-collapse">
+        <ul class=" menu_ul">
+          <li class="nav_li1 active">
+            <router-link to="/dashboard">
+              <!-- <div class="bg_ico"> -->
+                <span>首页</span>
+              <!-- </div> -->
+            </router-link>
+          </li>
+          <li class="nav_li2">
+            <router-link to="/layout/catalog/resource">
+              <!-- <div class="bg_ico"> -->
+                <span>目录</span>
+              <!-- </div> -->
+            </router-link>
+          </li>
+          <li class="nav_li3">
+            <router-link to="/layout/subject">
+              <!-- <div class="bg_ico"> -->
+                <span>应用服务</span>
+              <!-- </div> -->
+            </router-link>
+          </li>
+          <li class="nav_li4">
+            <router-link to="/layout/interaction">
+              <!-- <div class="bg_ico"> -->
+                <span>互动交流</span>
+              <!-- </div> -->
+            </router-link>
+          </li>
+        </ul>
+      </div>
+      <div class="login-register">
+        <ul class="cont">
+          <li v-show="!islogin" class="admin" id="loginid">
+            <router-link to="/login">
+              <button>登录</button>
+            </router-link>
+          </li>
+          <li v-show="islogin" class="admin" id="loginname">
+            <el-dropdown trigger="click">
+              <span class="el-dropdown-link"><img src="../assets/header/username.png" />&nbsp;&nbsp;{{username}} <i class="el-icon-caret-bottom el-icon--right"></i></span>
+              <el-dropdown-menu slot="dropdown">
+               <!--  <el-dropdown-item>
+                  <router-link to="/layout/admin/applyList">个人中心</router-link>
+                </el-dropdown-item>
+                <el-dropdown-item divided>
+                  <router-link to="/layout/admin/applyList">申请列表</router-link>
+                </el-dropdown-item> -->
+                <el-dropdown-item divided>
+                  <a @click="loginOut">退出</a>
+                </el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </li>
+          <li class="applyAccount" id="applyAccount">
+            <router-link to="/register">
+              <span>注册</span>
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="banner-row3">
+      <p class="title">成都市政务信息资源开放目录</p>
+      <!-- <img class="banner-image" src="../assets/login/title.png"> -->
+      <div class="row3-3">
+        已开放<span>{{ directoryCount }}</span>个数据集
+        <!-- <span>188</span>个应用 -->
+      </div>
+      <div class="input-patch banner-row3">
+          <input type="text" v-model="keywords" class="form-control" placeholder="请输入目录名称关键词"><button  @click="searchKeywords()" class="btn btn-default" type="button">搜索</button>
+          <img class="search-icon" src="../assets/dashboard/Search.png" />
+        </div>
+    </div>
+  </header>
+  <!-- banner end -->
+  <!-- 目录  start -->
+  <section class="main-1">
+    <div class="section-content">
+      <template>
+        <el-tabs v-model="activeCatalog" type="card" @tab-click="getList(activeCatalog)">
+          <el-tab-pane name="first">
+            <a slot="label">主题分类</a>
+            <div class="tab-body">
+              <div>
+                <dl v-for="(item,index) in themeData" class="img-group dep-item0">
+                  <router-link :to="{ path: '/layout/catalog/resource', query: {dirCode:item.code}}">
+                    <dt><img :src="item.icon" /></dt>
+                    <dd class="des">{{item.name}}</dd>
+                  </router-link>
+                </dl>   
+                <dl class="img-group dep-item0" v-if="moreShow">
+                  <router-link :to="{ path: '/layout/catalog/resource', query: {dirCode:''}}">
+                    <dt><img src="../assets/dashboard/more.png" /></dt>
+                    <dd class="des">更多</dd>
+                  </router-link>
+                </dl>  
+              </div>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane name="second">
+            <a slot="label">部门分类</a>
+            <div class="tab-body">
+              <dl v-for="(item,index) in departmentData" class="img-group dep-item0">
+                <router-link :to="{ path: '/layout/catalog/resource', query: {dirCode:item.code}}">
+                  <dt><img :src="item.icon" /></dt>
+                  <dd class="des">{{item.name}}</dd>
+                </router-link>
+              </dl> 
+              <dl class="img-group dep-item0" v-if="moreShow">
+                <router-link :to="{ path: '/layout/catalog/resource', query: {dirCode:''}}">
+                  <dt><img src="../assets/dashboard/more.png" /></dt>
+                  <dd class="des">更多</dd>
+                </router-link>
+              </dl> 
+            </div>
+          </el-tab-pane>
+        </el-tabs>
+        <div class="card-wrap">
+          <div class="tab-card">
+            <div class="card">
+              <p class="hot"></p>
+              <div class="card-header">
+                <dl class="img-group dep-item4">
+                  <dt><img src="../assets/dashboard/u301.png" /></dt>
+                  <dd class="des">热门数据</dd>
+                </dl> 
+              </div>
+              <div class="card-body">
+                <table cellpadding="10">
+                  <tbody>
+                    <tr>
+                      <th>标题</th>
+                      <th>下载次数</th>
+                      <th>类别</th>
+                    </tr>
+                    <tr v-for="item in hotData"  class="item">
+                      <td class="col-1-1" :title="item.dataset_name">{{ item.dataset_name }}</td>
+                      <td class="col-1-2">{{ item.count }}</td>
+                      <td class="col-1-3" :title="item.classify_name">{{ item.classify_name }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <router-link to="/layout/catalog/resource"> <a class="pull-right detail">更多&gt;</a></router-link>
+            </div>
+            <div class="card">
+              <p class="newest"></p>
+              <div class="card-header">
+                <dl class="img-group dep-item4">
+                  <dt><img src="../assets/dashboard/u604.png" /></dt>
+                  <dd class="des">最新数据</dd>
+                </dl> 
+              </div>
+              <div class="card-body">
+                <table cellpadding="10">
+                  <tbody>
+                    <tr>
+                      <th>标题</th>
+                      <th>时间</th>
+                      <th>部门</th>
+                    </tr>
+                    <tr v-for="item in latestData" class="item">
+                      <td class="col-2-1" :title="item.dataset_name">{{ item.dataset_name }}</td>
+                      <td class="col-2-2" >{{ item.create_time }}</td>
+                      <td class="col-2-3" :title="item.org_name">{{ item.org_name }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <router-link to="/layout/catalog/resource"> <a class="pull-right detail">更多&gt;</a></router-link>
+            </div>
+           <!--  <div class="card">
+              <p class="hotAPI"></p>
+              <div class="card-header">
+                <dl class="img-group dep-item4">
+                  <dt><img src="../assets/dashboard/u603.png" /></dt>
+                  <dd class="des">热门API</dd>
+                </dl>
+              </div>
+              <div class="card-body">
+                <table cellpadding="10">
+                  <tbody>
+                    <tr>
+                      <th>标题</th>
+                      <th>时间</th>
+                      <th>申请次数</th>
+                    </tr>
+                    <tr v-for="o in 5" :key="o" class="item">
+                      <td class="col-3-1">交委道路行驶行政处罚信息</td>
+                      <td class="col-3-2"> 2017-08-03</td>
+                      <td class="col-3-2">234</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <router-link to="/layout/catalog/infolist"> <a class="pull-right detail">更多&gt;</a></router-link>
+            </div> -->
+          </div>
+        </div>
+      </template>
+    </div>
+  </section>
+  <!-- 目录    end -->
+  <footer>
+    <p>
+      <span>主办：成都市人民政府</span><span class="m-30">承办：成都市大数据和电子政务管理办公室</span><span>  承建维护：成都市软件产业发展中心</span>
+    </p>
+    <p>
+      <span>版权所有：成都市大数据和电子政务管理办公室</span><span class="m-30">备案编号：</span>
+    </p>
+  </footer>
+</main>

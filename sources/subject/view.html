@@ -1,0 +1,64 @@
+<main id="subject">
+  <div class="section-content">
+    <el-tabs type="border-card" v-model="activeName" @tab-click="changeTab">
+      <el-tab-pane :key="item.name" v-for="(item, index) in devthemes" :label="item.name" :name="item.name">
+        <div v-show="jumpRoute">
+          <dl v-for='subitem in item.children' class="lstDl">
+            <dt class="ui-link">&nbsp;&nbsp;{{subitem.name}} >&nbsp;&nbsp;&nbsp;</dt>
+            <dd>
+              <span v-for='ssubitem in subitem.children'>
+                  <span v-if='ssubitem.url'  :class="{ active: (current_item === ssubitem) }">
+                   <a  class="texta" target="_blank" v-bind:title="ssubitem.name" @click="showLink(ssubitem,'',index)" > | {{ssubitem.name}}</a>
+                  </span>
+              <span v-else :class="{ active: (activeChild  === ssubitem.name) }">
+                    <a  :class="{textaDep:istextaDep}" :pid="ssubitem.id" @click="handleClick(ssubitem,ssubitem.id)"> | {{ssubitem.name}}</a> 
+                  </span>
+              </span>
+            </dd>
+          </dl>
+        </div>
+        <div v-for='item in data1'>
+          <div v-show="activeChild!=''" class="div_dep Box">
+            <a :class="{ active: (current_item.name=== item.name) }" @click="showLink(item,'dep',index)" target="_blank">|&nbsp;&nbsp;{{ item.name }}</a>
+          </div>
+        </div>
+        <!--工具简介-->
+        <div class="row-list" v-show="showLinkDom">
+          <div class="row1-title">
+              <!-- <router-link :to="{ path: '/layout/service/serviceList/detail', query: {name:'网络理政平台'}}"> -->
+                <div class="row1-title-text pull-left"> 工具简介</div>
+              <!-- </router-link> -->
+            <!-- <div class="right-info pull-right">
+              <button type="button" class="btn btn-tool">下载</button>
+            </div> -->
+          </div>      
+          <!-- 二维码 -->
+          <div  class="row2">
+            <div class="left qrcode" :id="'qrcode'+index">
+              <!-- <img class="img " src="../assets/service/12345.png"> -->
+            </div>
+            <div class="right">
+              <ul>
+                <li class="row2-des">
+                  <i class="fa fa-circle"></i>
+                  <span>工具名称：{{current_item.name}}</span>
+                </li>
+                <li class="row3-info">
+                  <i class="fa fa-circle"></i>
+                  <span>工具类型：{{current_item.appCategoryName}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row3">
+            <span>创建时间：{{current_item.creatTime}}</span>
+            <div class="pull-right">
+              <span class="">{{current_item.visitCount}}次浏览</span>
+              <span class="row4-right">36次下载</span>
+            </div>
+          </div>
+        </div>
+      </el-tab-pane>
+    </el-tabs>
+  </div>
+</main>

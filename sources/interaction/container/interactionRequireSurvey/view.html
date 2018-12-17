@@ -1,0 +1,58 @@
+<main id="require-survey">
+  <div :style="showStyle">
+    <el-form :model="ruleForm" :rules="rules2" ref="ruleForm" label-width="110px" class="demo-ruleForm">
+      <el-row>
+        <p class="tips">如果您在网站没有找到自己所要的数据，请您通过如下途径向我们反馈。<span>（您还没有登录，要参与互动请您先&nbsp;<router-link to="/login">登录</router-link>）</span></p>
+      </el-row>
+      <el-row>
+        <el-col :span="14">
+          <el-form-item label="资源名称" :rules="[{ required: true, message: '资源名称不能为空', trigger: 'blur' }]" prop="datasetName" label-suffix="sfdfsd">
+            <el-input v-model="ruleForm.datasetName"></el-input>
+          </el-form-item>
+        </el-col>
+      </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item label="资源用途" :rules="[{ required: true, message: '资源用途不能为空', trigger: 'blur' }]" prop="use">
+          <el-input v-model="ruleForm.use"></el-input>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item label="资源描述" :rules="[
+      { required: true, message: '资源描述不能为空', trigger: 'blur' }
+    ]" prop="desc">
+          <el-input v-model="ruleForm.desc"></el-input>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item label="验证码" prop="inputCode">
+          <form id="form1" runat="server">
+            <div class="verification">
+              <el-input v-model="ruleForm.inputCode"></el-input>
+              <table border="0" cellspacing="5" cellpadding="5" >
+                  <tr>
+                      <td></td><td> <div class="code" id="checkCode" @click="createCode()" ></div></td>
+                  </tr>
+                  <tr>
+                  </tr>
+              </table>
+            </div>
+          </form>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="14">
+        <el-form-item>
+          <el-button type="primary" :disabled="disable" @click="submitForm('ruleForm')">提交</el-button>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    </el-form>
+  </div>
+  <el-login v-if="showDialogComponent"></el-login>
+</main>

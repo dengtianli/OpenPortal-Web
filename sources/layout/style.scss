@@ -1,0 +1,175 @@
+    @import "../common/styles/base.scss";
+    #layout {
+      @include fill;
+      display: flex;
+      flex-direction: column;
+      header {
+        .header-row1 {
+          // background: url("../assets/header/header-bg.png") no-repeat;
+          background: $main-blue;
+          background-size: 100% 100%;
+          width: 100%;
+          height: 5rem;
+          .nav-text {
+            @include pull-left;
+            margin-top: 1.5rem;
+            img {
+              margin-bottom: -8px;
+              margin-right: 10px;
+              margin-left: 4.75rem;
+            }
+            .text {
+              font-size: $size-title-large;
+              color: $white;
+              letter-spacing: 2.67px;
+              line-height: $line-height-larger;
+            }
+          }
+          .head-nav {
+            @include pull-right;
+            margin-right: 5rem;
+            .menu_ul {
+              margin-bottom: 0;
+              >li {
+                display: inline-block;
+                a {
+                  font-size: $size-text-large;
+                  margin: 0 20px;
+                  display: block;
+                  opacity: 0.6;
+                  color: $white;
+                  line-height: $line-height-large;
+                  text-decoration: none;
+                  padding-bottom: 8px;
+                  margin-top: 2rem;
+                  &:hover {
+                    // border-bottom: 2px solid $white;
+                    opacity: 1;
+                  }
+                  span {
+                    display: block;
+                  }
+                }
+                .active {
+                  a {
+                    border-bottom: 2px solid $white;
+                  }
+                }
+              }
+            }
+          }
+          .login-register {
+            @include pull-right;
+            margin-right: 5rem;
+            line-height: 16px;
+            margin-top: 1.88rem;
+            .cont {
+              margin: 0;
+              color: $hd-blue-light;
+              .admin {
+                .el-dropdown-link {
+                  color: $white;
+                  opacity: 0.6;
+                  cursor: pointer;
+                  &:hover {
+                    opacity: 1;
+                  }
+                  i {
+                    font-size: 0.5rem;
+                  }
+                }
+                button {
+                  border: 0;
+                  outline: 0;
+                  width: 4.5rem;
+                  height: 1.5rem;
+                  font-size: 14px;
+                  border-radius: 4px;
+                  color: $dark-blue;
+                  background: $white;
+                }
+                a {
+                  text-decoration: none;
+                }
+              }
+              li {
+                display: inline-block;
+                a {
+                  color: $white;
+                  text-decoration: none;
+                }
+              }
+              .applyAccount {
+                margin-left: 1.8rem;
+              }
+            }
+            .applyAccount {
+              span {
+                color: $white;
+                opacity: 0.6;
+                &:hover {
+                  color: $white;
+                  opacity: 1 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+      .router-layout {
+        background: $white;
+      }
+      .router-link-active {
+        border-bottom: 2px solid $white;
+        opacity: 1!important;
+      }
+      footer {
+        background: $black;
+        padding: 32px 0;
+        color: $white;
+        text-align: center;
+        a {
+          text-decoration: none;
+        }
+        p {
+          margin: 0 0 10px;
+          opacity: 0.6;
+        }
+        .aboutus {
+          color: $white;
+          margin-right: 15px;
+        }
+        .interaction {
+          color: $white;
+          margin-left: 15px;
+        }
+        .m-30 {
+          margin: 0 30px;
+        }
+      }
+      #login-modal{
+        .inputdiv{
+            margin: 30px auto;
+            text-align: center;
+            display: center;
+            justify-content: center;
+            .spanuser{
+              display: inline-block;
+              background: #4197F4;
+              vertical-align: middle;
+              img{
+                padding: 8px 13px;
+              }
+            }
+            input{
+              height: 38px;
+              width: 80%;
+              //width: 365px;
+              outline: none;
+              text-indent: 10px;
+              border: none;
+              border: 1px solid #dfdfdf;
+            }
+        }
+      }
+    }

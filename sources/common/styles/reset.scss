@@ -1,0 +1,199 @@
+@import "./base.scss";
+html {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  @include fill;
+  @include clean;
+  body {
+    @include fill;
+    @include clean;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    background: $dark-white;
+    color: #333;
+    #app {
+      @include fill;
+      @include clean;
+    }
+  }
+  *{
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  span.error{
+        display: block;
+    text-align: center;
+        color:red;
+      }
+  /** header*/
+  .el-dropdown-menu__item>a {
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    display: inline-block;
+    &:hover {
+      color: $main-blue;
+    }
+  }
+  /**dashboard 首頁 覆盖element ui组件样式 start**/
+  #dashboard {
+    .el-tabs__header {
+      border: none;
+    }
+    .el-tabs__item {
+      display: inline-block;
+      margin-left: 40px;
+      margin-top: 20px;
+      font-size: 18px;
+      padding: 0;
+      color: #333;
+      // border: 1px solid #DFDFDF !important;
+      // transform: skew(-15deg);
+      a {
+        display: block;
+        color: #333;
+        // transform: skew(15deg);
+
+      }
+      &:hover {
+        border-bottom: 3px solid #4EB0FF;
+      }
+    }
+    .el-tabs__nav {
+      text-align: center;
+      float: none;
+    }
+    .el-tabs__nav .is-active {
+      // color: #333;
+      border-top:none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 3px solid #4EB0FF;
+      // border: none;
+    }
+
+  }
+  /**dashboard 首頁 覆盖element ui组件样式 end**/
+  /** table common style*/
+  .jqTable td>span {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .table {
+    width: 100%;
+    table-layout: fixed;
+    display: table;
+    border: 1px solid #DBE0E8;
+    margin-bottom: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    thead tr {
+      background: $tableHd-blue;
+      th {
+        border: none;
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+      }
+    }
+    tbody tr {
+      &:hover {
+        background: $tableTr-hover;
+      }
+      td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+  .table-bordered {
+    th {
+      border: 1px solid #ddd;
+    }
+    td {
+      border: 1px solid #ddd;
+    }
+  }
+  .el-table th {
+    background: $tableHd-blue;
+  }
+  .el-table__header-wrapper thead div {
+    background: $tableHd-blue;
+  }
+  /** table common style*/
+  .el-rate__item {
+    display: inline-block;
+  }
+   /* alert style  */
+  .el-message{
+      position: absolute!important;
+      top: 40%!important;
+      left: 50%!important;
+    }
+
+  .el-checkbox__label{
+        color: #fff!important;
+      }
+
+  #interaction-sidebar .interaction-menuList .router-link-active {
+    background: linear-gradient(to right, #76C8FB, $main-blue)!important;
+  }
+  #interaction-sidebar .interaction-menuList li:hover {
+    background: linear-gradient(to right, #76C8FB, $main-blue)!important;
+  }
+  #interaction-sidebar .interaction-menuList {
+    border: none!important;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.10)!important;
+  } 
+  // .el-form-item__label {
+  //   text-align: left;
+  // }
+  .el-form-item.is-required .el-form-item__label:before {
+    content:"";
+  }
+  .el-form-item__label {
+    width: 80px!important;
+  }
+  .el-form-item__content {
+    // margin-left: 80px!important;
+  }
+  #interaction-sidebar .interaction-menuList li > a[data-v-6de47b26] {
+    color: #475065 ;
+  }
+  #require-survey #form1 .code {
+    line-height: 30px!important;
+    background: #ccc;
+    height: 36px;
+    font-size: 24px;
+    border-radius: 4px;
+  }
+  #interaction-advice #form1 .code {
+    line-height: 30px!important;
+    background: #ccc;
+    height: 36px!important;
+    font-size: 24px;
+    border-radius: 4px;
+  }
+  .el-tabs__content {
+    overflow: visible!important;
+  }
+  .el-tabs--card>.el-tabs__header .el-tabs__item {
+    border: none;
+  }
+  // 数据目录中树节点高亮
+  .el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+    background: linear-gradient(to right, #76C8FB, $main-blue)!important;
+    color: #fff;
+  }
+}
